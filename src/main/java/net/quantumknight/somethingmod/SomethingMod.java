@@ -36,7 +36,8 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(SomethingMod.MODID)
-public class SomethingMod {
+public class SomethingMod
+{
     public static final String MODID = "somethingmod";
     public static final Logger LOGGER = LogUtils.getLogger();
 
