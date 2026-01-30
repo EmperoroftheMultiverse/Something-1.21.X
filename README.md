@@ -1,25 +1,34 @@
+# Something Mod 1.21.X
 
-Installation information
-=======
+A showcase mod built using NeoForge focused on custom Java logic, raycasting, and sound layering.
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+## 🛠 Included Items
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+### 1. The Spark Stick
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+**Animation**: Uses the SPEAR (Trident) hold animation.
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+**Logic**: Implements a custom charging mechanic.
+
+**How to Use**: Hold Right-Click to charge (At least for one second).
+
+**Minimum Charge**: 1 second (20 ticks).
+
+**Scaling**: Every additional second of charging adds an extra lightning strike (up to 3 strikes total).
+
+**Targeting**: Uses Raycasting to strike exactly where you are looking (up to 50 blocks away) rather than at your own position.
+
+### 2. The Phase Blade
+
+**Action**: Dash teleportation.
+
+**How to Use**: Right-Click to instantly teleport 5 blocks in the direction you are facing.
+
+**Sound Design**: Features layered sound effects using the new 1.21 BREEZE_SHOOT effect for the start of the dash and a quiet ENDERMAN_TELEPORT for the finish.
+
+**Cooldown**: Built-in 2-second cooldown to prevent exploit.
+
+## 🚀 How to Run
+
+Find the items in the Creative Ingredients Tab or use /give @s somethingmod:[item_name].
