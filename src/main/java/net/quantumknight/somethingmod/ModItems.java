@@ -59,7 +59,7 @@ public class ModItems {
 
                 @Override
                 public UseAnim getUseAnimation(ItemStack stack) {
-                    return UseAnim.SPEAR; // Switched to Trident throw animation
+                    return UseAnim.SPEAR; // Switched to Spear throw animation
                 }
 
                 @Override
@@ -75,7 +75,7 @@ public class ModItems {
                 public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
                     if (!level.isClientSide) {
                         // 1. Start Sound: Breeze Shooting/Wind Effect
-                        // We use a slightly higher pitch (1.2F) to make it feel snappier
+                        // Use a slightly higher pitch (1.2F) to make it feel snappier
                         level.playSound(null, player.getX(), player.getY(), player.getZ(),
                                 SoundEvents.BREEZE_SHOOT, SoundSource.PLAYERS, 0.8F, 1.2F);
 
