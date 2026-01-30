@@ -58,15 +58,19 @@ public class SomethingMod
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
+        ModItems.ITEMS.register(modEventBus);
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
 
     }
 
-    // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.SPARK_STICK);
+            event.accept(ModItems.PHASE_BLADE);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
